@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Project 78</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <img src="" style="width: 30%;height: 50%;" id="family_member_image">
+        <h4 id="family_member_name"></h4>
+        <button onclick="update();">Next</button>
+    </body>
+    <script>
+        var images = ["https://t4.ftcdn.net/jpg/03/20/31/69/360_F_320316936_ND0OiMOAMXLGmMmBqCrkhBv3ppccXPGk.jpg",
+        "https://www.pngitem.com/pimgs/m/284-2841358_mother-with-short-brown-hair-clip-art-at.png",
+        "https://www.clipartkey.com/mpngs/m/18-181087_dad-clipart.png",
+        "https://i.pinimg.com/474x/51/c4/1c/51c41ca57295d84db2aa4f75f69940e0.jpg",
+        "https://i.pinimg.com/originals/e8/da/2d/e8da2dbb09738b8c5b56e2379eb3dc21.jpg"];
+        var names = ["Family Book", "Richa (Mom)", "Anant (Dad)", "Atishay (Son)", "Avika (Daughter)"];
+
+        var i = 0;
+        function update(){
+            i++;
+            var number_of_family_members = 4;
+            if(i>number_of_family_members)
+            {
+                i = 0;
+            }
+            var updatedimg = images[i];
+            var updatednames = names[i];
+            console.log(updatednames);
+            document.getElementById("family_member_image").src = updatedimg;
+            document.getElementById("family_member_name").innerHTML = updatednames;
+        }
+    </script>
+</html>
